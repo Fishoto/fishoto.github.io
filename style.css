@@ -53,9 +53,18 @@ header.top {
 }
 
 .lang {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
   font-size: 15px;
   color: var(--secondary);
+  text-decoration: underline;
+  cursor: pointer;
 }
+
+html:not([lang="pl"]) [data-lang="pl"],
+html[lang="pl"] [data-lang="en"] { display: none; }
 
 h1 {
   font-family: "Avenir Next", "Avenir", -apple-system, system-ui, sans-serif;
