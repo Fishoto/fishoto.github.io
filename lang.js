@@ -1,7 +1,8 @@
 (function () {
   var root = document.documentElement;
   var key = "fishoto.lang";
-  var supported = ["en", "pl", "de"];
+  var supported = ["en", "pl", "de", "sv", "nb", "da", "fi"];
+  var aliases = { no: "nb", nn: "nb" };
   var visibility = document.createElement("style");
 
   function stored() {
@@ -14,6 +15,7 @@
     var languages = navigator.languages || [navigator.language || ""];
     for (var i = 0; i < languages.length; i++) {
       var code = String(languages[i]).toLowerCase().slice(0, 2);
+      code = aliases[code] || code;
       if (supported.indexOf(code) !== -1) return code;
     }
     return "en";
