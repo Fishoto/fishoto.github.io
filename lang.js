@@ -1,7 +1,7 @@
 (function () {
   var root = document.documentElement;
   var key = "fishoto.lang";
-  var supported = ["en", "pl", "de", "sv", "nb", "da", "fi"];
+  var supported = ["en", "pl", "de", "sv", "nb", "da", "fi", "ru"];
   var aliases = { no: "nb", nn: "nb" };
   var visibility = document.createElement("style");
 
