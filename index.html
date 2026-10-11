@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fishoto</title>
+<link rel="icon" href="img/icon-light.png">
 <meta name="description" content="Fishoto is a fishing log for iPhone that remembers the size, the spot and the lure.">
 <link rel="stylesheet" href="style.css">
 <script src="lang.js"></script>
@@ -12,12 +13,72 @@
 <main>
   <header class="top">
     <a class="brand" href="./">Fishoto</a>
-    <div class="lang" role="group" aria-label="Language" hidden><button type="button" data-set="en" lang="en">English</button><button type="button" data-set="pl" lang="pl">Polski</button><button type="button" data-set="de" lang="de">Deutsch</button></div>
+    <label class="lang" hidden>
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9s1.3-6.3 3.8-9z"/></svg>
+      <select aria-label="Language"></select>
+    </label>
   </header>
 
   <article data-lang="en">
-    <h1>A fishing log that remembers the size, the spot and the lure.</h1>
-    <p class="muted">Fishoto for iPhone. Keep every catch in one place, watch your personal bests grow and share your best catches.</p>
+    <section class="hero">
+      <picture>
+        <source srcset="img/icon-dark.png" media="(prefers-color-scheme: dark)">
+        <img class="icon" src="img/icon-light.png" width="96" height="96" alt="">
+      </picture>
+      <h1>A fishing log that remembers the size, the spot and the lure.</h1>
+      <p class="lead">Remember last year's personal best? Where it bit, what it took, how big it was? Fishoto does.</p>
+      <a class="badge" href="https://apps.apple.com/app/id6816922399">
+        <picture>
+          <source srcset="img/badge/en-white.svg" media="(prefers-color-scheme: dark)">
+          <img src="img/badge/en-black.svg" width="160" height="53" alt="Download on the App Store">
+        </picture>
+      </a>
+    </section>
+
+    <div class="features" aria-label="Screens">
+      <section class="feature">
+        <img src="img/en/collection.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Every catch in one place</h2>
+          <p>Photo, species, length, weight, spot and lure, saved in seconds and easy to find later.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/en/detail.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>The fish and the story behind it</h2>
+          <p>Each catch keeps its date, place, method and the notes you want to remember.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/en/records.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Watch your personal bests grow</h2>
+          <p>Your biggest fish of every species, with the new ones marked as they come.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/en/post.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Share your best catches</h2>
+          <p>Turn a catch into a ready post with the photo, the numbers and a caption.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/en/profile.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Get to know your fishing</h2>
+          <p>See which species, spots and lures work best for you.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Yours only.</h2>
+      <p>No sign-up, no ads, no tracking. Your catches sync through your own iCloud and stay visible only to you.</p>
+    </section>
+
+    <p class="muted">Free to download. Fishoto Pro (monthly or yearly) gives you unlimited catches and posts without the Fishoto strip.</p>
 
     <nav class="links" aria-label="Pages">
       <a href="support/">Support</a>
@@ -28,8 +89,65 @@
   </article>
 
   <article data-lang="pl" lang="pl">
-    <h1>Dziennik wędkarza, który pamięta rozmiar, łowisko i przynętę.</h1>
-    <p class="muted">Fishoto na iPhone'a. Wszystkie połowy w jednym miejscu, rekordy, które rosną, i posty z najlepszymi rybami.</p>
+    <section class="hero">
+      <picture>
+        <source srcset="img/icon-dark.png" media="(prefers-color-scheme: dark)">
+        <img class="icon" src="img/icon-light.png" width="96" height="96" alt="">
+      </picture>
+      <h1>Dziennik wędkarza, który pamięta rozmiar, łowisko i przynętę.</h1>
+      <p class="lead">Pamiętasz swój rekord z zeszłego roku? Gdzie padł, na co wziął, ile miał? Fishoto pamięta.</p>
+      <a class="badge" href="https://apps.apple.com/app/id6816922399">
+        <picture>
+          <source srcset="img/badge/pl-white.svg" media="(prefers-color-scheme: dark)">
+          <img src="img/badge/pl-black.svg" width="160" height="53" alt="Pobierz z App Store">
+        </picture>
+      </a>
+    </section>
+
+    <div class="features" aria-label="Ekrany">
+      <section class="feature">
+        <img src="img/pl/collection.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Wszystkie połowy w jednym miejscu</h2>
+          <p>Zdjęcie, gatunek, długość, waga, łowisko i przynęta, zapisane w kilka sekund i łatwe do odnalezienia.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/pl/detail.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Ryba i historia, która za nią stoi</h2>
+          <p>Każdy połów zachowuje datę, miejsce, metodę i notatki, które chcesz zapamiętać.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/pl/records.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Patrz, jak rosną Twoje rekordy</h2>
+          <p>Największa ryba z każdego gatunku, a nowe rekordy są oznaczone, gdy tylko padną.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/pl/post.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Pochwal się najlepszymi rybami</h2>
+          <p>Zamień połów w gotowy post ze zdjęciem, wymiarami i opisem.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/pl/profile.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Poznaj swoje wędkowanie</h2>
+          <p>Zobacz, które gatunki, łowiska i przynęty sprawdzają się u Ciebie najlepiej.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Tylko Twoje.</h2>
+      <p>Bez zakładania konta, bez reklam i bez śledzenia. Połowy synchronizują się przez Twoje iCloud i widzisz je tylko Ty.</p>
+    </section>
+
+    <p class="muted">Pobranie jest darmowe. Fishoto Pro (miesięczne lub roczne) daje nielimitowane połowy i posty bez paska Fishoto.</p>
 
     <nav class="links" aria-label="Strony">
       <a href="support/">Pomoc</a>
@@ -40,12 +158,69 @@
   </article>
 
   <article data-lang="de" lang="de">
-    <h1>Ein Fangbuch, das sich Größe, Angelplatz und Köder merkt.</h1>
-    <p class="muted">Fishoto fürs iPhone. Alle Fänge an einem Ort, Rekorde, die wachsen, und Posts mit deinen besten Fischen.</p>
+    <section class="hero">
+      <picture>
+        <source srcset="img/icon-dark.png" media="(prefers-color-scheme: dark)">
+        <img class="icon" src="img/icon-light.png" width="96" height="96" alt="">
+      </picture>
+      <h1>Ein Fangbuch, das sich Größe, Angelplatz und Köder merkt.</h1>
+      <p class="lead">Weißt du noch, wie groß dein bester Fang im letzten Jahr war? Wo er gebissen hat und auf welchen Köder? Fishoto weiß es.</p>
+      <a class="badge" href="https://apps.apple.com/app/id6816922399">
+        <picture>
+          <source srcset="img/badge/de-white.svg" media="(prefers-color-scheme: dark)">
+          <img src="img/badge/de-black.svg" width="160" height="53" alt="Laden im App Store">
+        </picture>
+      </a>
+    </section>
+
+    <div class="features" aria-label="Bildschirme">
+      <section class="feature">
+        <img src="img/de/collection.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Alle Fänge an einem Ort</h2>
+          <p>Foto, Fischart, Länge, Gewicht, Angelplatz und Köder, in Sekunden gespeichert und später leicht zu finden.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/de/detail.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Der Fisch und seine Geschichte</h2>
+          <p>Jeder Fang behält Datum, Ort, Methode und die Notizen, an die du dich erinnern willst.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/de/records.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Sieh deine Rekorde wachsen</h2>
+          <p>Dein größter Fisch jeder Art, neue Rekorde werden direkt markiert.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/de/post.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Zeig deine besten Fänge</h2>
+          <p>Mach aus einem Fang einen fertigen Post mit Foto, Maßen und Text.</p>
+        </div>
+      </section>
+      <section class="feature">
+        <img src="img/de/profile.jpg" width="640" height="1391" loading="lazy" alt="">
+        <div>
+          <h2>Lerne dein Angeln kennen</h2>
+          <p>Sieh, welche Fischarten, Angelplätze und Köder bei dir am besten funktionieren.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Nur deins.</h2>
+      <p>Keine Anmeldung, keine Werbung, kein Tracking. Deine Fänge werden über dein eigenes iCloud synchronisiert und sind nur für dich sichtbar.</p>
+    </section>
+
+    <p class="muted">Der Download ist kostenlos. Fishoto Pro (monatlich oder jährlich) bietet unbegrenzt viele Fänge und Posts ohne Fishoto-Leiste.</p>
 
     <nav class="links" aria-label="Seiten">
       <a href="support/">Support</a>
-      <a href="privacy/">Datenschutzerklärung</a>
+      <a href="privacy/">Datenschutz&shy;erklärung</a>
     </nav>
 
     <footer>© 2026 Fishoto</footer>

@@ -2,6 +2,7 @@
   var root = document.documentElement;
   var key = "fishoto.lang";
   var supported = ["en", "pl", "de"];
+  var visibility = document.createElement("style");
 
   function stored() {
     try { return localStorage.getItem(key); } catch (e) { return null; }
@@ -18,23 +19,39 @@
     return "en";
   }
 
+  function name(code) {
+    try {
+      var native = new Intl.DisplayNames([code], { type: "language" }).of(code);
+      return native.charAt(0).toLocaleUpperCase(code) + native.slice(1);
+    } catch (e) {
+      return code.toUpperCase();
+    }
+  }
+
   function apply(lang) {
     root.lang = lang;
+    visibility.textContent = '[data-lang]:not([data-lang="' + lang + '"]) { display: none; }';
     document.title = root.getAttribute("data-title-" + lang) || document.title;
   }
 
+  root.classList.add("js");
+  document.head.appendChild(visibility);
   apply(preferred());
 
   document.addEventListener("DOMContentLoaded", function () {
     var switcher = document.querySelector(".lang");
     if (!switcher) return;
+    var select = switcher.querySelector("select");
+    supported.forEach(function (code) {
+      var option = new Option(name(code), code);
+      option.lang = code;
+      select.add(option);
+    });
+    select.value = root.lang;
     switcher.hidden = false;
-    switcher.addEventListener("click", function (event) {
-      var button = event.target.closest("[data-set]");
-      if (!button) return;
-      var next = button.getAttribute("data-set");
-      apply(next);
-      try { localStorage.setItem(key, next); } catch (e) {}
+    select.addEventListener("change", function () {
+      apply(select.value);
+      try { localStorage.setItem(key, select.value); } catch (e) {}
     });
   });
 })();
