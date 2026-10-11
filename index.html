@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-title-en="Fishoto" data-title-pl="Fishoto">
+<html lang="en" data-title-en="Fishoto" data-title-pl="Fishoto" data-title-de="Fishoto">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
 <main>
   <header class="top">
     <a class="brand" href="./">Fishoto</a>
-    <button class="lang" type="button" hidden><span data-lang="en" lang="pl">Polski</span><span data-lang="pl" lang="en">English</span></button>
+    <div class="lang" role="group" aria-label="Language" hidden><button type="button" data-set="en" lang="en">English</button><button type="button" data-set="pl" lang="pl">Polski</button><button type="button" data-set="de" lang="de">Deutsch</button></div>
   </header>
 
   <article data-lang="en">
@@ -34,6 +34,18 @@
     <nav class="links" aria-label="Strony">
       <a href="support/">Pomoc</a>
       <a href="privacy/">Polityka prywatności</a>
+    </nav>
+
+    <footer>© 2026 Fishoto</footer>
+  </article>
+
+  <article data-lang="de" lang="de">
+    <h1>Ein Fangbuch, das sich Größe, Angelplatz und Köder merkt.</h1>
+    <p class="muted">Fishoto fürs iPhone. Alle Fänge an einem Ort, Rekorde, die wachsen, und Posts mit deinen besten Fischen.</p>
+
+    <nav class="links" aria-label="Seiten">
+      <a href="support/">Support</a>
+      <a href="privacy/">Datenschutzerklärung</a>
     </nav>
 
     <footer>© 2026 Fishoto</footer>

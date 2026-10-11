@@ -53,6 +53,13 @@ header.top {
 }
 
 .lang {
+  display: flex;
+  gap: 12px;
+}
+
+.lang[hidden] { display: none; }
+
+.lang button {
   padding: 0;
   border: 0;
   background: none;
@@ -63,8 +70,12 @@ header.top {
   cursor: pointer;
 }
 
-html:not([lang="pl"]) [data-lang="pl"],
-html[lang="pl"] [data-lang="en"] { display: none; }
+html:not([lang="pl"]):not([lang="de"]) [data-lang]:not([data-lang="en"]),
+html[lang="pl"] [data-lang]:not([data-lang="pl"]),
+html[lang="de"] [data-lang]:not([data-lang="de"]),
+html:not([lang="pl"]):not([lang="de"]) [data-set="en"],
+html[lang="pl"] [data-set="pl"],
+html[lang="de"] [data-set="de"] { display: none; }
 
 h1 {
   font-family: "Avenir Next", "Avenir", -apple-system, system-ui, sans-serif;
